@@ -54,10 +54,9 @@ binarize.default <- function(data, n_bins = 4, thresh_infreq = 0.01, name_infreq
 binarize.data.frame <- function(data, n_bins = 4, thresh_infreq = 0.01, name_infreq = "-OTHER", one_hot = TRUE) {
 
     # CHECKS ----
-
     # Check data is charater, factor, or numeric
     check_data_type(data,
-                    classes_allowed = c("numeric", "character", "factor", "ordered"),
+                    classes_allowed = c("numeric", "integer", "logical", "character", "factor", "ordered"),
                     .fun_name = "binarize")
 
     # Check missing
@@ -69,6 +68,9 @@ binarize.data.frame <- function(data, n_bins = 4, thresh_infreq = 0.01, name_inf
     # binary_split <- split_binary(data)
     # data <- binary_split[["not_binary_data"]]
     # data_binary <- binary_split[["binary_data"]]
+
+    # Convert logical to integer
+    data <- logical_to_integer(data)
 
     # NON-BINARY DATA ----
     if (ncol(data) > 0) {
@@ -115,7 +117,7 @@ binarize.data.frame <- function(data, n_bins = 4, thresh_infreq = 0.01, name_inf
 # SUPPORTING FUNCTIONS -----
 
 # Checks for missing values
-check_data_type <- function(data, classes_allowed = c("numeric", "character", "factor", "ordered"), .fun_name = NULL) {
+check_data_type <- function(data, classes_allowed = c("numeric", "integer", "character", "factor", "ordered"), .fun_name = NULL) {
 
     class_summary_tbl <- data %>%
         purrr::map_df(~ class(.)[[1]]) %>%
@@ -228,7 +230,7 @@ fix_high_skew_numeric_data <- function(data, n_bins, unique_limit) {
         # Inspect feature distributions
         column_quantiles_tbl <- data %>%
             dplyr::select_if(is.numeric) %>%
-            purrr::map_df(stats::quantile)
+            purrr::map_dfc(stats::quantile)
 
         # Count unique quantiles
         column_unique_count_tbl <- column_quantiles_tbl %>%
@@ -348,4 +350,7 @@ handle_binned_names <- function(data, recipe) {
     return(data)
 }
 
-
+logical_to_integer <- function(data) {
+    data %>%
+        dplyr::mutate_if(is.logical, as.integer)
+}

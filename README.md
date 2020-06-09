@@ -1,14 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# correlationfunnel
-
-<!-- <img src="man/figures/logo-correlationfunnel.png" width="147" height="170" align="right" /> -->
+# correlationfunnel <img src="man/figures/logo-correlationfunnel.png" width="147" height="170" align="right" />
 
 *by [Business Science](https://www.business-science.io/)*
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.org/business-science/correlationfunnel.svg?branch=master)](https://travis-ci.org/business-science/correlationfunnel)
 [![Coverage
@@ -24,7 +22,14 @@ The goal of `correlationfunnel` is to speed up Exploratory Data Analysis
 
 ## Installation
 
-You can install the released version of `correlationfunnel` from
+You can install the latest stable (CRAN) version of `correlationfunnel`
+with:
+
+``` r
+install.packages("correlationfunnel")
+```
+
+You can install the development version of `correlationfunnel` from
 [GitHub](https://github.com/business-science/) with:
 
 ``` r
@@ -39,7 +44,7 @@ consuming even for small data sets. ***Rather than search for
 relationships, what if we could let the relationships come to
 us?***
 
-<!-- <img src="man/figures/README-corr_funnel.png" width="35%" align="right" style="border-style: solid; border-width: 2px; border-color: #2c3e50; margin-left: 10px; "/> -->
+<img src="man/figures/README-corr_funnel.png" width="35%" align="right" style="border-style: solid; border-width: 2px; border-color: #2c3e50; margin-left: 10px; "/>
 
 **Solution:** Enter `correlationfunnel`. The package provides a
 **succinct workflow** and **interactive visualization tools** for
@@ -349,7 +354,7 @@ Correlation Analysis, Automated Machine Learning, and Feature
 Explanation as part of our ROI-Driven Data Science
 Curriculum.
 
-<!-- <a href="https://university.business-science.io/p/machine-learning-web-apps-level-1-bundle-r-track-courses-101-102-201"><img src="man/figures/README-3-course-system.jpg" width="100%" style="border-style: solid; border-width: 2px; border-color: #2c3e50"/></a> -->
+<a href="https://university.business-science.io/p/machine-learning-web-apps-level-1-bundle-r-track-courses-101-102-201"><img src="man/figures/README-3-course-system.jpg" width="100%" style="border-style: solid; border-width: 2px; border-color: #2c3e50"/></a>
 
   - [**Learn Data Science Foundations
     (DS4B 101-R)**](https://university.business-science.io/p/ds4b-101-r-business-analysis-r):

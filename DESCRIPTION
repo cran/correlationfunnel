@@ -2,7 +2,7 @@ Package: correlationfunnel
 Type: Package
 Title: Speed Up Exploratory Data Analysis (EDA) with the Correlation
         Funnel
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: 
     person("Matt", "Dancho", email = "mdancho@business-science.io", role = c("aut", "cre"))
 Description: 
@@ -17,16 +17,16 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.1)
-Imports: ggplot2, rlang, recipes, magrittr, plotly, tibble, dplyr,
-        tidyr, stats, utils, ggrepel, stringr, forcats, purrr, cli,
-        crayon, rstudioapi
+Imports: ggplot2, rlang, recipes, magrittr, plotly, tibble, dplyr (>=
+        1.0.0), tidyr (>= 1.0.0), stats, utils, ggrepel, stringr,
+        forcats, purrr, cli, crayon, rstudioapi
 Suggests: scales, knitr, rmarkdown, covr, lubridate, testthat (>=
         2.1.0)
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2019-08-05 19:40:15 UTC; mdancho
+Packaged: 2020-06-09 00:33:40 UTC; mdancho
 Author: Matt Dancho [aut, cre]
 Maintainer: Matt Dancho <mdancho@business-science.io>
 Repository: CRAN
-Date/Publication: 2019-08-06 09:30:09 UTC
+Date/Publication: 2020-06-09 04:40:03 UTC
